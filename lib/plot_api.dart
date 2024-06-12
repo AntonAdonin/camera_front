@@ -32,10 +32,12 @@ final Map<_statusesEnum, String> _statuses = {
 
 final local_ip = "http://127.0.0.1";
 final global_ip = "http://185.104.248.237";
+final https_ip = "https://sharemsuic.site:8001";
+
 
 class PlotApi {
 
-  final String _url = global_ip;
+  final String _url = https_ip;
   final _port = 8000;
 
   Future<Map<String, dynamic>?> getPlot(List<DateTime> dates) async {
