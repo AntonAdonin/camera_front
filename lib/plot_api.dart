@@ -32,7 +32,7 @@ final Map<_statusesEnum, String> _statuses = {
 
 final local_ip = "http://127.0.0.1";
 final global_ip = "http://185.104.248.237";
-final https_ip = "https://sharemsuic.site:8001";
+final https_ip = "https://camera.sharemusic.site";
 
 
 class PlotApi {
