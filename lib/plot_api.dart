@@ -46,7 +46,7 @@ class PlotApi {
     }
     DateTime left = dates[0];
     DateTime right = dates[1];
-    String req = '$_url:$_port/${_endpoints[_endpointsEnum.getPlot]}/';
+    String req = '$_url/${_endpoints[_endpointsEnum.getPlot]}/';
 
     var body = jsonEncode(<String, dynamic>{
       "left": {"year": left.year, "month": left.month, "day": left.day},
