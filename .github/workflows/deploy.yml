@@ -11,17 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: Set up Flutter
-      - uses: subosito/flutter-action@v2
+        uses: subosito/flutter-action@v2
         with:
           channel: "stable"
           flutter-version: 3.x
+      
       - run: flutter config --enable-web
       - run: flutter clean
       - run: flutter pub get
       - run: flutter pub upgrade
-      - run: flutter build web --release --web-renderer html --base-href /camera_front/
+      - name: Build
+        run: flutter build web --release --web-renderer html --base-href /camera_front/
       - run: |
           cd build/web
           git init
